@@ -2,16 +2,18 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { AntDesign } from '@expo/vector-icons';
-
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 //Aquí llamamos a las screens
 import Homescreen from "./screens/Homescreen";
 import Calculadora from "./screens/Calculadora";
 import Conversor from "./screens/Conversor";
 import Tienda from "./screens/Tienda";
+import Factura from "./screens/Factura";
 
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const MenuTabs = () => {
     return (
@@ -21,6 +23,8 @@ const MenuTabs = () => {
             tabBarStyle: {
                 height: 95,
                 position: 'absolute',
+                paddingTop: 9,
+                paddingBottom: 15,
                 bottom: 17,
                 left: 12,
                 right: 12,
